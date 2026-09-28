@@ -1,4 +1,17 @@
+import java.util.Arrays;
+
 public class First_and_last_position {
+    public static void main(String[] args) {
+
+        int[] nums = {5, 7, 7, 8, 8, 10};
+        int target = 8;
+
+        First_and_last_position obj = new First_and_last_position();
+
+        int[] result = obj.searchRange(nums, target);
+
+        System.out.println(Arrays.toString(result));
+    }
     public int[] searchRange(int[] nums, int target) {
         
 int first=findfirst(nums, target);
@@ -50,3 +63,5 @@ return new int[]{first,last};
         }   
 
 }
+
+
