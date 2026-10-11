@@ -14,6 +14,7 @@ public class majority_elemnt {
 
         }
      }
+     //find frequency
      for(int key:map.keySet()){
        if( map.get(key)> n/3){
         System.out.println(key);
