@@ -49,6 +49,16 @@ public static int height(Node root){
     int myheight= Math.max(leftheight , rightheight)+1;
     return myheight;
 }
+//diameter of nodes
+public static int diameter(Node root){
+    if(root==null){
+        return 0;
+    }
+    int diam1 = diameter(root.left);
+    int diam2 = diameter(root.right);
+    int diam3 = height(root.left)+ height(root.right) +1;
+    return Math.max( diam3 , Math.max(diam1,diam2));
+}
 
 
 public static void main(String args[]){
@@ -60,6 +70,7 @@ public static void main(String args[]){
 // postorder(root);
 // levelorder(root);
 // System.out.println(countofnodes(root));
-  System.out.println(height(root));
+//   System.out.println(height(root));
+  System.out.println(diameter(root));
 }
 }
