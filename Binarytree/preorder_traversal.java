@@ -11,6 +11,7 @@ static class Node{
         this.right=null;
     }
 }
+
 static class BinaryTree{
     static int idx=-1;
     public static Node buildTree(int nodes[]){
@@ -23,6 +24,7 @@ static class BinaryTree{
      newNode.right=buildTree(nodes);
      return newNode;
 }}
+//preorder traversal
 
   public static void preorder(Node root){
     if(root==null){
@@ -32,12 +34,22 @@ static class BinaryTree{
     preorder(root.left);
     preorder(root.right);
   } 
+  //inorder traversal
+  public static void inorder(Node root){
+    if(root==null){
+        return ;
+    }
+    inorder(root.left);
+    System.out.println(root.data+" ");
+    inorder(root.right);
+  }
 
 public static void main(String args[]){
   int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,-1,6,-1,-1};
   BinaryTree tree= new BinaryTree();
   Node root = tree.buildTree(nodes);
-  preorder(root);
+//   preorder(root);
+  inorder(root);
   
 }
 }
