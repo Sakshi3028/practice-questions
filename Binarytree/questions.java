@@ -38,7 +38,17 @@ public static int countofnodes(Node root){
 
     return leftNodes + rightNodes +1;
 }
-//sum of nodes
+//height of nodes
+public static int height(Node root){
+     if (root == null) {
+        return 0;
+    }
+    int leftheight= height(root.left);
+    int rightheight= height(root.right);
+    
+    int myheight= Math.max(leftheight , rightheight)+1;
+    return myheight;
+}
 
 
 public static void main(String args[]){
@@ -49,7 +59,7 @@ public static void main(String args[]){
 //   inorder(root);
 // postorder(root);
 // levelorder(root);
-System.out.println(countofnodes(root));
-  
+// System.out.println(countofnodes(root));
+  System.out.println(height(root));
 }
 }
