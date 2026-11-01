@@ -38,8 +38,8 @@ public class graph {
 
         //print 2s neighbour
         for(int i=0;i<graph[1].size();i++){
-            Edge e= graph[1].get(i);
-            System.out.print(e.dest+ " , "+e.wt);
+            Edge e= graph[2].get(i);
+            System.out.print(e.dest+ " , " +e.wt);
         }
     }
 }
